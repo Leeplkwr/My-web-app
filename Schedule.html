@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Daily Schedule</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(to right, #e1bee7, #b3e5fc);
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    .schedule-box {
+      width: 95%;
+      max-width: 480px;
+      background: #ffffff;
+      padding: 25px;
+      border-radius: 25px;
+      box-shadow: 10px 10px 25px #aaa,
+                  -10px -10px 25px #fff;
+    }
+
+    .schedule-box h2 {
+      text-align: center;
+      margin-bottom: 25px;
+      font-size: 24px;
+      color: #4a148c;
+    }
+
+    .task {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 15px;
+      padding: 12px 14px;
+      border-radius: 15px;
+      background: linear-gradient(to right, #fce4ec, #f3e5f5);
+      box-shadow: inset 2px 2px 4px rgba(0,0,0,0.05),
+                  inset -2px -2px 4px rgba(255,255,255,0.8);
+      transition: transform 0.3s;
+    }
+
+    .task:nth-child(3) { background: linear-gradient(to right, #e3f2fd, #bbdefb); }
+    .task:nth-child(4) { background: linear-gradient(to right, #fff9c4, #ffe082); }
+    .task:nth-child(5) { background: linear-gradient(to right, #e0f7fa, #b2ebf2); }
+    .task:nth-child(6) { background: linear-gradient(to right, #f1f8e9, #dcedc8); }
+
+    .task:hover {
+      transform: scale(1.02);
+    }
+
+    .task input[type="checkbox"] {
+      width: 20px;
+      height: 20px;
+      accent-color: #4caf50;
+      cursor: pointer;
+    }
+
+    .task input[type="text"] {
+      flex: 1;
+      margin: 0 10px;
+      border: none;
+      background: transparent;
+      font-size: 14px;
+      color: #333;
+      outline: none;
+    }
+
+    .task input[type="text"].time {
+      width: 100px;
+      text-align: right;
+      font-size: 13px;
+      color: #555;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    @media (max-width: 400px) {
+      .schedule-box {
+        padding: 15px;
+      }
+
+      .task input[type="text"] {
+        font-size: 13px;
+        margin: 0 8px;
+      }
+
+      .task input[type="text"].time {
+        width: 90px;
+        font-size: 12px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="schedule-box">
+    <h2>Daily Schedule</h2>
+
+    <div class="task">
+      <input type="checkbox">
+      <input type="text" value="Read Book">
+      <input type="text" class="time" value="1:00 to 2:00">
+    </div>
+
+    <div class="task">
+      <input type="checkbox">
+      <input type="text" value="Self-Study">
+      <input type="text" class="time" value="2:00 to 3:00">
+    </div>
+
+    <div class="task">
+      <input type="checkbox">
+      <input type="text" value="Forex Trading">
+      <input type="text" class="time" value="6:30 to 9:00">
+    </div>
+
+    <div class="task">
+      <input type="checkbox">
+      <input type="text" value="Study Thai">
+      <input type="text" class="time" value="8:30 to 9:30">
+    </div>
+
+    <div class="task">
+      <input type="checkbox">
+      <input type="text" value="Forex Trading">
+      <input type="text" class="time" value="9:30 to 10:00">
+    </div>
+  </div>
+
+</body>
+</html>
